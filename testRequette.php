@@ -14,4 +14,14 @@ try {
 	echo 'N° : '.$e -> getCode();
 	exit();
 }
-?>
+
+
+$t_genre = $PDO_BDD -> query('SELECT *
+							  FROM t_genre');
+
+while($donnees = $t_genre -> fetch()) { ?>
+	<p><b><?php echo $donnees['GENRE_LABEL']; ?></b></br>
+		<?php echo $donnees['GENRE_DESCRIPTION']; ?></br>
+		<?php echo $donnees['GENRE_ILLUSTRATION']; ?></br>
+	</p>
+<?php }
