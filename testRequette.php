@@ -17,11 +17,11 @@ try {
 
 
 $t_genre = $PDO_BDD -> query('SELECT *
-							  FROM t_genre');
+							  FROM t_theme');
 
 while($donnees = $t_genre -> fetch()) { ?>
-	<p><b><?php echo $donnees['GENRE_LABEL']; ?></b></br>
-		<?php echo $donnees['GENRE_DESCRIPTION']; ?></br>
-		<?php echo $donnees['GENRE_ILLUSTRATION']; ?></br>
+	<p><b><?php echo $donnees['THEME_LABEL']; ?></b></br>
+		<?php echo $donnees['THEME_DESCRIPTION']; ?></br>
+		<?php echo $donnees['THEME_ILLUSTRATION']; ?></br>
 	</p>
 <?php }
